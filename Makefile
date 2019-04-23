@@ -40,10 +40,10 @@ $(VENV):
 	touch $(VENV)
 
 $(VENV)/.pip-installed-production: $(VENV) requirements.txt
-	$(VENV)/bin/pip install -r requirements.txt && touch $(VENV)/.pip-installed-production
+	$(VENV)/bin/pip install -r requirements.txt && touch $@
 
 $(VENV)/.pip-installed-development: $(VENV) requirements-dev.txt
-	$(VENV)/bin/pip install -r requirements-dev.txt && touch $(VENV)/.pip-installed-development
+	$(VENV)/bin/pip install -r requirements-dev.txt && touch $@
 
 .git/hooks/pre-commit: $(VENV)
 	$(VENV)/bin/pre-commit install
