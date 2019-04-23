@@ -1,0 +1,10 @@
+-r requirements.in
+pip-tools
+pre-commit
+pycodestyle
+pycountry
+pydocstyle
+pylint
+pytest
+pytest-cov
+safety
