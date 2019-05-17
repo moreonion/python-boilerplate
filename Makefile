@@ -30,6 +30,8 @@ requirements: requirements.txt requirements-dev.txt
 %.txt: %.in
 	pip-compile -v --output-file $@ $<
 
+requirements-dev.txt: requirements-dev.in requirements.in
+
 # Actual files/directories
 ################################################################################
 
